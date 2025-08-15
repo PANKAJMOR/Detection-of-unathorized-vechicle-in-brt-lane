@@ -4,15 +4,13 @@ import util
 from sort.sort import *
 from util import get_car, read_license_plate, write_csv
 import subprocess
-
-
 results = {}
 
 mot_tracker = Sort()
 
 # load models
-coco_model = YOLO('yolov8n.pt')
-license_plate_detector = YOLO('./license_plate_detector.pt')
+coco_model = YOLO('models/yolov8n.pt')
+license_plate_detector = YOLO('models/license_plate_detector.pt')
 
 # load video
 cap = cv2.VideoCapture('demo1.mp4')
